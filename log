@@ -69,3 +69,14 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 d92752e
+Thu 25 Apr 2024 11:35:25 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:82:16: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   82 |   map->buckets = (Pair *)calloc(capacity,sizeof(Pair));
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+e601778

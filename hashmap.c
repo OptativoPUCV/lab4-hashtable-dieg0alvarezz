@@ -48,11 +48,6 @@ void insertMap(HashMap * map, char * key, void * value) {
           }
         map->buckets[pos]=createPair(key,value);
         map->size++;
-  
-
-
-
-  
 
 
 }
@@ -90,7 +85,7 @@ HashMap * createMap(long capacity) {
   map->current = -1;
   return map;
 
-
+}
 void eraseMap(HashMap * map,  char * key) {    
 
 
