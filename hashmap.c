@@ -78,13 +78,13 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-    HashMap * map = (HashMap *)malloc(sizeof(HashMap));
+  /*  HashMap * map = (HashMap *)malloc(sizeof(HashMap));
     map->buckets = (Pair *)calloc(capacity,sizeof(Pair));
     map->size = 0;
     map->capacity = capacity;
     map->current = -1;
     return map;
-
+*/
 }
 void eraseMap(HashMap * map,  char * key) {    
 
@@ -98,9 +98,20 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
+    if(map==NULL) return NULL;
+    for (long i = 0; i < map->capacity; i++)
+      {
+        if (map->buckets[i] != NULL && map->buckets[i]->key != NULL)
+        {
+          map->current = i;
+          return map->buckets[i];
+        }
+      }
+
 
     return NULL;
 }
+
 
 Pair * nextMap(HashMap * map) {
 

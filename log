@@ -96,3 +96,14 @@ hashmap.c:82:18: error: assignment to ‘Pair **’ from incompatible pointer ty
 cc1: all warnings being treated as errors
 Compilation failed
 b0b62c1
+Thu 25 Apr 2024 11:38:03 PM UTC: 
+ hashmap.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:88:1: error: control reaches end of non-void function [-Werror=return-type]
+   88 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+d091b65
