@@ -78,7 +78,7 @@ void enlarge(HashMap * map) {
         }
     }
 
-  free(buckets_old)
+  free(buckets_old);
 }
 
 
