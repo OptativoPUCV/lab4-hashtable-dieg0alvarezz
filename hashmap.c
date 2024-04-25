@@ -60,6 +60,24 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
+    if (map == NULL) return;
+
+    Pair **buckets_old = map->buckets;
+    long capacity_old = map->capacity;
+
+
+    map->capacity *= 2;
+    map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
+    map->size = 0;
+
+
+    for (long i = 0; i < capacity_old; i++) {
+        if (buckets_old[i] != NULL && buckets_old[i]->key != NULL) {
+            insertMap(map, buckets_old[i]->key, buckets_old[i]->value);
+            map->size++;
+        }
+    }
+
 
 }
 
