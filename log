@@ -14,3 +14,16 @@ Thu 25 Apr 2024 11:20:47 PM UTC:
  tests:  5|4
 total_score: 30/70
 c5ed58b
+Thu 25 Apr 2024 11:21:32 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:81:20: error: expected ‘;’ before ‘}’ token
+   81 |   free(buckets_old)
+      |                    ^
+      |                    ;
+   82 | }
+      | ~                   
+Compilation failed
+a527ab5
