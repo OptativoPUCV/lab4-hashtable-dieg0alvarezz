@@ -99,7 +99,6 @@ void eraseMap(HashMap *map, char *key) {
         pos = (pos + 1) % map->capacity;
     }
 
-    // Verificar si se encontró la clave
     if (map->buckets[pos] != NULL && map->buckets[pos]->key != NULL && strcmp(map->buckets[pos]->key, key) == 0) {
         
         free(map->buckets[pos]); 
